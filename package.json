@@ -1,0 +1,44 @@
+{
+  "name": "dignissimosat",
+  "version": "1.0.0",
+  "description": "A package to send and receive data using promises.",
+  "main": "js/index",
+  "types": "dts/index",
+  "files": [
+    "js",
+    "dts"
+  ],
+  "scripts": {
+    "test": "npm run compile && jest .",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p ./tsconfig.json",
+    "watch": "tsc -w -p .",
+    "clean": "rm -rf dts && rm -rf js",
+    "start": "node js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FloydMarvin/dignissimosat.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "MaryWard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FloydMarvin/dignissimosat.git/issues"
+  },
+  "homepage": "https://github.com/FloydMarvin/dignissimosat.git",
+  "dependencies": {
+    "@element-ts/neon": "^1.0.3",
+    "@types/bson": "latest",
+    "@types/mongodb": "latest",
+    "mongodb": "latest"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "jest": "latest",
+    "typescript": "latest"
+  }
+}
